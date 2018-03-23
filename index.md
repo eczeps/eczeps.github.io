@@ -8,3 +8,7 @@ This was a [collaborative project](https://eczeps.github.io/WikipediaRoamer/) th
 
 ## Sound Animation
 This is a [fun animation](https://eczeps.github.io/sound_animation/) I made a while back that creates a graphic that responds to sound.
+
+# Links
+[Github](https://github.com/eczeps)
+[LinkedIn](https://www.linkedin.com/in/ellie-czepiel/)
