@@ -3,7 +3,7 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  background-color: #e6e6ff;
   position: fixed;
   top: 0;
   width: 100%;
@@ -16,19 +16,20 @@ li {
 }
 
 li a {
+  font-family: 'Lato', sans-serif;
   display: block;
-  color: white;
+  color: black;/*make the text black*/
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
 
 li a:hover {
-  background-color: #111;
+  background-color: #ccccff;
 }
 
 .active {
-  background-color: #4CAF50;
+  background-color: #e6e6ff;
 }
 
 li:last-child {
@@ -48,6 +49,10 @@ img:hover{
   filter: alpha(opacity=50); /* For IE8 and earlier */
 }
 
+.navbar{
+  float: center;
+}
+
 .page{
   padding-top: 100;
 }
@@ -59,6 +64,7 @@ img:hover{
 
 
 #bio{
+  font-family: 'Lato', sans-serif;
   float: left;
   padding-left: 20;
 }
