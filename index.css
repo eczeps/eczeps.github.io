@@ -2,15 +2,14 @@
 body {
   margin: 0;
   font-family: 'Lato', sans-serif;
+  background: linear-gradient(rgba(20,0,255,.5), rgba(20,0,255,0), rgba(20, 0, 255, 0));
 }
 
-#wholePage{
-	background: linear-gradient(rgba(20,0,255,.5), rgba(20,0,255,0), rgba(20, 0, 255, 0));
-}
 
 h2{
 color: #a0a0ff;
 }
+
 
 h1, h2{
   margin: auto;
@@ -22,6 +21,10 @@ h1, h2{
   padding-bottom: 50%;
   text-align: center;
   color: white;
+}
+
+.title{
+  padding-top: 30px;
 }
 
 .page{
