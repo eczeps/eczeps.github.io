@@ -1,37 +1,88 @@
+<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Ellie | About</title>
-    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel="stylesheet">
-    <link rel="stylesheet" href="index.css">
-  </head>
-  <body>
-    <div class="navbar">
-      <ul>
-        <li><a href="index.html">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
-      </ul>
-    </div>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<title>Ellie </title>
+<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel="stylesheet">
+</head>
+
+<body>
+
+<div id="wholePage">
+
+  <div class="header">
+    <h1>Welcome!</h1>
+  </div>
+
+  <div id="navbar">
+    <a class="active" href="#about">About</a>
+    <a href="#projects">Projects</a>
+  </div>
+
+  	<div class="content">
 
     <div class="page">
-      <h1>Welcome!</h1>
+      <a id="about"></a>
+      <h2>About</h2>
       <img src="linkedIn.jpg" alt="profilePhoto" id="profilePhoto">
       <div id="bio">
         <p>
-          I’m Ellie. I use computer science for social good.
+          Hey there! I’m Ellie. I code for social good.</p>
 
-          I always have a side
-          <a href="projects.html">project</a>
+          <p>I always have a side
+          <a href="#projects">project</a>
            — or two, or three — going, usually with some sort of social good spin on it.  I also love
            <a href="https://www.linkedin.com/in/ellie-czepiel/">working in nonprofits</a>
-            in tech and non-tech capacities alike.
+            in tech and non-tech capacities alike.</p>
 
-          When I’m not trying to save the world with code, I love going on runs and reading books on random topics I know nothing about.</p>
+          <p>When I’m not trying to save the world with code, I love going on runs and reading books on random topics I know nothing about.</p>
         <div>
           <a href="https://www.linkedin.com/in/ellie-czepiel/">LinkedIn</a>
           <a href="https://github.com/eczeps">Github</a>
         </div>
       </div>
-    </div>
-  </body>
+</div>
+
+
+
+
+<div class="page">
+      <a id="projects"></a>
+      <h2>Projects</h2>
+        <div class="project">
+          <a href ="projects/wikipediaGame.html">
+            <img src ="linkedIn.jpg" alt="Wikipedia Game">
+          </a>
+        </div>
+        <div class="project">
+          <p>Events Calendar</p>
+        </div>
+        <div class="project">
+          <p>another project idk</p>
+        </div>
+  </div>
+
+	</div>
+</div>
+
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
+
+
+
+</body>
 </html>

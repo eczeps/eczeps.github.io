@@ -1,56 +1,32 @@
 
-
-/*old navbar
-
-ul {
-  list-style-type: none;
+body {
   margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #e6e6ff;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  float: center;
 }
 
-li {
-  float: left;
-  border-right: 1px solid #bbb;
+#wholePage{
+	background: linear-gradient(rgba(20,0,255,.5), rgba(20,0,255,0), rgba(20, 0, 255, 0));
 }
 
-li a {
-  font-family: 'Lato', sans-serif;
-  display: block;
-  color: black;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+h2{
+color: #a0a0ff;
 }
 
-li a:hover {
-  background-color: #ccccff;
-}
-
-li a:active {
-  background-color: #e6e6ff;
-}
-
-li:last-child {
-  border-right: none;
-}
-
-*/
-
-li a{
-  float:left;
-  font-family: 'Lato', sans-serif;
-}
-
-.navbar{
-  /*centering the navbar*/
+h1, h2{
   margin: auto;
   width: 30%;
+  font-family: 'Lato', sans-serif;
+}
+
+.header {
+  padding-top:30%;
+  padding-bottom: 50%;
+  text-align: center;
+  color: white;
+}
+
+.page{
+padding: 10%;
+padding-bottom:80%;
 }
 
 a{
@@ -61,21 +37,52 @@ a:hover{
   color: #e6e6ff;
 }
 
+
+#navbar {
+  overflow: hidden;
+  background-color: rgb(179, 179, 255);
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar a:hover {
+  background-color: rgb(204, 204, 255);
+  color: black;
+}
+
+#navbar a.active {
+  color: white;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
 img{
   /*makes it circular*/
   border-radius: 50%;
 }
 
-h1{
-  margin: auto;
-  width: 30%;
-  font-family: 'Lato', sans-serif;
-}
 
 
-.page{
-  padding-top: 100;
-}
 
 .project{
   float: left;
@@ -89,6 +96,7 @@ h1{
   opacity: 0.5;
   filter: alpha(opacity=50); /* For IE8 and earlier */
 }
+
 
 
 #bio{
