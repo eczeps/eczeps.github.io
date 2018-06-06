@@ -1,6 +1,7 @@
 
 body {
   margin: 0;
+  font-family: 'Lato', sans-serif;
 }
 
 #wholePage{
@@ -14,7 +15,6 @@ color: #a0a0ff;
 h1, h2{
   margin: auto;
   width: 30%;
-  font-family: 'Lato', sans-serif;
 }
 
 .header {
