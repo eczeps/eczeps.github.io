@@ -6,15 +6,15 @@
     <link rel="stylesheet" href="../index.css">
   </head>
   <body>
-    <div id="wholePage">
 
-      <div id="navbar">
-        <a class="active" href="../index.html#about">About</a>
+      <!--start the navbar out as sticky so it starts at the top of the page and stays there-->
+      <div id="navbar" class="sticky">
+        <a href="../index.html#about">About</a>
         <a href="../index.html#projects">Projects</a>
       </div>
 
       	<div class="content">
-          <div class="title"><h2>Events Calendar</h2></div>
+          <h2 class="projectTitle">Events Calendar</h2>
           <p>
             During my sophomore year of college, I noticed a pattern of students, including myself, complaining that there wasn't enough to do around campus.  I set out to make an impact on this problem.</p>
             
@@ -34,18 +34,22 @@
 
 
     <script>
-    window.onscroll = function() {myFunction()};
+        
+        //making the navbar sticky
+        window.onscroll = function() {myFunction()};
 
-    var navbar = document.getElementById("navbar");
-    var sticky = navbar.offsetTop;
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
 
-    function myFunction() {
-      if (window.pageYOffset >= sticky) {
-        navbar.classList.add("sticky")
-      } else {
-        navbar.classList.remove("sticky");
-      }
-    }
+        function myFunction() {
+          if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky");
+            navbar.classList.remove("notSticky");
+          } else {
+            navbar.classList.add("notSticky");
+            navbar.classList.remove("sticky");
+          }
+}
     </script>
-  </body>
+</body>
 </html>

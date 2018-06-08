@@ -16,17 +16,21 @@
     <h1>Welcome!</h1>
   </div>
 
+<!--start the navbar out as not sticky (this is how it calculates the bottom of the page, where it should start).-->
   <div id="navbar" class="notSticky">
-    <a class="active" href="#about">About</a>
+    <a href="#about">About</a>
     <a href="#projects">Projects</a>
   </div>
 
+    <!--content is everything below the navbar. in other words, everything except the welcome section-->
   	<div class="content">
-
+        
+        <!--page is one "page", so the about section vs the projects section-->
     <div class="page">
       <a id="about"></a>
-      <div class="title"><h2>About</h2></div>
+      <h2 class="sectionTitle">About</h2>
         <div id="bio">
+            <!--nesting the img tag in the p tag makes them appear next to each other, instead of one on top of the other-->
             <p>
       <img src="linkedIn.jpg" alt="profilePhoto" id="profilePhoto" style="float:left;padding-right:20px;">
     
@@ -51,23 +55,23 @@
 
 <div class="page">
       <a id="projects"></a>
-      <div class="title"><h2>Projects</h2></div>
+      <h2 class="sectionTitle">Projects</h2>
         <div id="projectGallery">
-        <div class="project">
-          <a href ="projects/wikipediaGame.html">
-            <img src ="wikipedia_logo.png" alt="Wikipedia Game" style="width:200px">
-            <h3>The Wikipedia Game</h3>
-          </a>
-        </div>
+            <div class="project">
+              <a href ="projects/wikipediaGame.html">
+                <img src ="wikipedia_logo.png" alt="Wikipedia Game" style="max-width:200px;max-height:190px">
+                <h3>The Wikipedia Game</h3>
+              </a>
+            </div>
+
+            <div class="project">
+              <a href ="projects/eventsCalendar.html">
+                <img src ="calendar.png" alt="Events Calendar" style="max-width:200px;max-height:190px">
+                <h3>Events Calendar</h3>
+              </a>
+            </div>
     
-        <div class="project">
-          <a href ="projects/eventsCalendar.html">
-            <img src ="calendar.png" alt="Events Calendar" style="max-width:200px;max-height:190px">
-            <h3>Events Calendar</h3>
-          </a>
-        </div>
-    
-  </div>
+    </div>
     </div>
 
 	</div>
@@ -82,7 +86,8 @@ var navbar = document.getElementById("navbar");
 var sticky = navbar.offsetTop;
 
 function myFunction() {
-  if (window.pageYOffset >= sticky) {
+    //if the top of the screen is past or at where the navbar started
+  if (document.documentElement.scrollTop >= sticky) {
     navbar.classList.add("sticky");
     navbar.classList.remove("notSticky");
   } else {
@@ -100,7 +105,7 @@ function myFunction() {
              $target = $(target);
 
          $('html, body').stop().animate({
-             'scrollTop': $target.offset().top - 60
+             'scrollTop': $target.offset().top
          }, 900, 'swing', function () {
              window.location.hash = target;
          });
