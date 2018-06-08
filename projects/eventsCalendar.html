@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ellie | Events Calendar</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="../index.css">
+  </head>
+  <body>
+    <div id="wholePage">
+
+      <div id="navbar">
+        <a class="active" href="../index.html#about">About</a>
+        <a href="../index.html#projects">Projects</a>
+      </div>
+
+      	<div class="content">
+          <div class="title"><h2>Events Calendar</h2></div>
+          <p>
+            During my sophomore year of college, I noticed a pattern of students, including myself, complaining that there wasn't enough to do around campus.  I set out to make an impact on this problem.</p>
+            
+            <p>A friend and I started by inviting some people we knew over for a board game night, and asking everyone who came to bring someone we didn't know.  Those game nights were a ton of fun.</p>
+            
+            <p>It soon became clear, though, that we needed a more centralized way of contacting people and getting new "members" than texting our friends a couple days before.  We decided to make a Facebook group where we would post about our increasing repertoire of events, from movie nights to Dungeons and Dragons character workshops.</p>
+            
+            <p>At the same time, though, its members were a small portion of the students at the school, and I had a hunch that the complaints I had been hearing were not limited in scope to just the people I knew.  I sensed that there might be a bigger user base -- and a better way to reach it -- than the members of our Facebook group.  I started thinking more about what it might look like to make a product aimed at improving events on campus for everyone.</p>
+            
+            <p>I started with a theory. Maybe it wasn't that there weren't enough happening on campus, but that people simply did not know about what was going on because there was no centralized platform to find campus-wide events. I found support for my theory through surveys and meetings with students and student government, so I set out to create the Events Calendar.</p>
+            
+            <p>Making this calendar is my summer side project.  Right now, my vision is a website -- and eventually an app -- with, among other things, a Google Calendar featuring all the events happening on campus, sorted into categories and importable into students' own calendars.</p>
+            
+            <p>In doing this project, I'm hoping to learn a lot more about web development and taking projects all the way from user research to release.  I'm excited to throw myself into the deep end and see what I come up with!
+          </p>
+        </div>
+
+
+    <script>
+    window.onscroll = function() {myFunction()};
+
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+    </script>
+  </body>
+</html>

@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html class="home-page"><!allows for the background image of the home page to be different from project pages>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="utf-8">
 <title>Ellie </title>
 <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel="stylesheet">
 <link rel="stylesheet" href="index.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -15,7 +16,7 @@
     <h1>Welcome!</h1>
   </div>
 
-  <div id="navbar">
+  <div id="navbar" class="notSticky">
     <a class="active" href="#about">About</a>
     <a href="#projects">Projects</a>
   </div>
@@ -25,9 +26,10 @@
     <div class="page">
       <a id="about"></a>
       <div class="title"><h2>About</h2></div>
-      <img src="linkedIn.jpg" alt="profilePhoto" id="profilePhoto">
-      <div id="bio">
-        <p>
+        <div id="bio">
+            <p>
+      <img src="linkedIn.jpg" alt="profilePhoto" id="profilePhoto" style="float:left;padding-right:20px;">
+    
           Hey there! I’m Ellie. I code for social good.</p>
 
           <p>I always have a side
@@ -50,17 +52,30 @@
 <div class="page">
       <a id="projects"></a>
       <div class="title"><h2>Projects</h2></div>
+        <div id="projectGallery">
         <div class="project">
           <a href ="projects/wikipediaGame.html">
-            <img src ="wikipedia_logo.png" alt="Wikipedia Game">
+            <img src ="wikipedia_logo.png" alt="Wikipedia Game" style="width:200px">
+            <h3>The Wikipedia Game</h3>
           </a>
         </div>
+    
+        <div class="project">
+          <a href ="projects/eventsCalendar.html">
+            <img src ="calendar.png" alt="Events Calendar" style="max-width:200px;max-height:190px">
+            <h3>Events Calendar</h3>
+          </a>
+        </div>
+    
   </div>
+    </div>
 
 	</div>
 
 
 <script>
+    
+    //making the navbar sticky
 window.onscroll = function() {myFunction()};
 
 var navbar = document.getElementById("navbar");
@@ -68,11 +83,29 @@ var sticky = navbar.offsetTop;
 
 function myFunction() {
   if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
+    navbar.classList.add("sticky");
+    navbar.classList.remove("notSticky");
   } else {
+    navbar.classList.add("notSticky");
     navbar.classList.remove("sticky");
   }
 }
+    
+    //making the smooth scroll when you use the navbar
+    $(document).ready(function () {
+     $('a[href^="#"]').on('click', function (e) {
+         e.preventDefault();
+
+         var target = this.hash,
+             $target = $(target);
+
+         $('html, body').stop().animate({
+             'scrollTop': $target.offset().top - 60
+         }, 900, 'swing', function () {
+             window.location.hash = target;
+         });
+     });
+ });
 </script>
 
 
