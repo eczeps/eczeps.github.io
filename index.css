@@ -1,5 +1,5 @@
 
-body {
+html, body {
   margin: 0;
   font-family: 'Lato', sans-serif;
 }
@@ -21,8 +21,8 @@ h1, h2 {
 }
 
 .header {
-  padding-top:20%;
-  padding-bottom: 30%;
+  padding-top:40%;
+  padding-bottom: 60%;
   text-align: center;
   color: white;
 }
@@ -68,7 +68,7 @@ a:hover{
 }
 
 .content {
-  padding: 80px;
+  padding: 6%;
 }
 
 .sticky {
