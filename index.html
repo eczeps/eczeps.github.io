@@ -87,7 +87,8 @@ var sticky = navbar.offsetTop;
 
 function myFunction() {
     //if the top of the screen is past or at where the navbar started
-  if (document.documentElement.scrollTop >= sticky) {
+    //there's all the || to account for different things working on different versions of different browsers
+  if ((window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop) >= sticky) {
     navbar.classList.add("sticky");
     navbar.classList.remove("notSticky");
   } else {
