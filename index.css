@@ -25,8 +25,19 @@ h1, h2 {
   margin: auto;
   width: 30%;
   text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: .4em;
+  margin-top: 20px;
+		
 }
 
+p{
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: .1em;
+}
 
 
 /*About and Projects sections on home page*/
@@ -48,6 +59,9 @@ a:hover{
 #navbar {
   overflow: hidden;
   background-color: #9d4485;
+  font-size: .5rem;
+  font-weight: 300;
+  letter-spacing: .1em;
 }
 
 
@@ -85,7 +99,7 @@ a:hover{
 
 
 .white-background{
-    background-color: #f3e670;
+    background-color: #f3f4f8;
     color: rgb(44,154,173);
 }
 
@@ -147,7 +161,6 @@ project gallery styling
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.5rem;
   color: #f3e670;
   border-radius: 50%;
   cursor: pointer;
@@ -158,6 +171,9 @@ project gallery styling
   overflow: hidden;
   text-align: center;
   margin-right: 25px;
+  font-size: 1rem;
+  letter-spacing: .1em;
+  font-weight: 300;
 }
 
 #projectGallery .icon-button::before {
@@ -464,10 +480,5 @@ section#welcomeAnimation > header {
 
 		section#welcomeAnimation header > h1 {
 			position: initial;
-			font-family: 'Lato', sans-serif;
 			color: #f3e670;
-			font-size: 18px;
-			font-weight: 500;
-			letter-spacing: .4em;
-			margin-top: 20px;
 		}
